@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Easy-Study</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string-array name="semester_no">
+        <item>I</item>
+        <item>II</item>
+        <item>III</item>
+        <item>IV</item>
+        <item>V</item>
+        <item>VI</item>
+        <item>VII</item>
+        <item>VIII</item>
+    </string-array>
+
+    <string-array name="branch_name">
+        <item>Computers</item>
+        <item>IT</item>
+        <item>Elecronics</item>
+        <item>Production</item>
+    </string-array>
+
+    <string-array name="sem5comps_subjects">
+        <item>MP</item>
+        <item>OS</item>
+        <item>CN</item>
+        <item>SOOAD</item>
+    </string-array>
+    <string-array name="sem6comps_subjects">
+        <item>MCC</item>
+        <item>DD</item>
+        <item>SE</item>
+        <item>SPCC</item>
+    </string-array>
+
+    <string-array name="year_name">
+        <item>DEC 16</item>
+        <item>MAY 16</item>
+        <item>MAY 15</item>
+        <item>DEC 15</item>
+        <item>MAY 14</item>
+        <item>DEC 14</item>
+    </string-array>
+</resources>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadingEdge="none"
+    tools:context="com.example.pranitraje.easy_study.UniversityPapers"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
+
+    <Spinner
+        android:id="@+id/semester_input"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/branch_input"
+        android:layout_alignStart="@+id/branch_input"
+        android:layout_below="@+id/semester_header"
+        android:layout_marginTop="27dp"
+        android:visibility="visible"
+        android:background="@drawable/spinnerborder"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="176dp" />
+
+    <TextView
+        android:id="@+id/branch_header"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/branch_input"
+        android:layout_alignLeft="@+id/branch_input"
+        android:layout_alignStart="@+id/branch_input"
+        android:layout_marginBottom="23dp"
+        android:text="Branch"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="208dp"
+        tools:text="Branch" />
+
+    <TextView
+        android:id="@+id/semester_header"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/semester_input"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/semester_input"
+        android:layout_marginTop="33dp"
+        android:text="Semester"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="146dp"
+        tools:text="Semester" />
+
+    <Spinner
+        android:id="@+id/branch_input"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/subject_header"
+        android:layout_alignLeft="@+id/subject_header"
+        android:layout_alignStart="@+id/subject_header"
+        android:background="@drawable/spinnerborder"
+        android:layout_marginBottom="19dp"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="237dp" />
+
+    <TextView
+        android:id="@+id/subject_header"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/subject_input"
+        android:layout_alignLeft="@+id/subject_input"
+        android:layout_alignStart="@+id/subject_input"
+        android:layout_marginBottom="21dp"
+        android:text="Subject"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="269dp"
+        tools:text="Subject" />
+
+    <Spinner
+        android:id="@+id/subject_input"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/year_header"
+        android:layout_alignLeft="@+id/year_header"
+        android:background="@drawable/spinnerborder"
+        android:layout_alignStart="@+id/year_header"
+        android:layout_marginBottom="20dp"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="299dp" />
+
+    <TextView
+        android:id="@+id/year_header"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/year_input"
+        android:layout_alignLeft="@+id/year_input"
+        android:layout_alignStart="@+id/year_input"
+        android:layout_marginBottom="21dp"
+        android:text="Year"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="331dp"
+        tools:text="Year" />
+
+    <Spinner
+        android:id="@+id/year_input"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/view_button"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/spinnerborder"
+        android:layout_marginBottom="24dp"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="360dp" />
+
+    <Button
+        android:id="@+id/view_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="69dp"
+        android:text="View"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="392dp"
+        tools:text="View" />
+
+</RelativeLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/attendance_mng"
+            android:icon="@drawable/tticon"
+            android:title="Attendance Manager"
+            />
+        <item
+            android:id="@+id/univ_papers"
+            android:icon="@drawable/unipap"
+            android:title="University Papers" />
+
+    </group>
+    <item android:title="Feedback">
+    <menu>
+        <item android:id="@+id/contact_us"
+            android:icon="@drawable/contacticon"
+            android:title="Contact Us"/>
+        <item android:id="@+id/rate_us"
+        android:icon="@drawable/rateicon"
+        android:title="Rate Us"/>
+    </menu>
+    </item>
+</menu>
