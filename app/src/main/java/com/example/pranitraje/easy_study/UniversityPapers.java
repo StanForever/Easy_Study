@@ -11,6 +11,11 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -247,21 +252,21 @@ public class UniversityPapers extends AppCompatActivity {
                         }break;
                     case "AM1":
                         switch(year){
-                            case "DEC 16":url="http://files.stupidsid.com/university_papers/engineering/D16/SE/Comps/Sem-3/AM3.pdf";break;
-                            case "MAY 16":url="http://files.stupidsid.com/university_papers/engineering/M16/SE/Comps/Sem3/AM3.pdf";break;
-                            case "DEC 15":url="http://files.stupidsid.com/university_papers/engineering/D15/SE/Comps/AM3.pdf";break;
-                            case "MAY 15":url="http://files.stupidsid.com/university_papers/engineering/M15/SE/SEM%203/COMP/MATHS.pdf";break;
-                            case "DEC 14":url="http://files.stupidsid.com/university_papers/engineering/D14/M3.pdf";break;
-                            case "MAY 14":url="http://files.stupidsid.com/university_papers/engineering/may2014/comp/s.e/J14SE3-comp/applied%20maths-3.pdf";break;
+                            case "DEC 16":url="https://firebasestorage.googleapis.com/v0/b/easystudy-e2cd4.appspot.com/o/I%2FAM1%2FAM1-D14.pdf?alt=media&token=fe75a12d-0b2c-4e0d-980b-b5d171360afa";break;
+                            case "MAY 16":url="https://firebasestorage.googleapis.com/v0/b/easystudy-e2cd4.appspot.com/o/I%2FAM1%2FAM1-M16.pdf?alt=media&token=00d3acef-4f9f-40b0-9eed-f37446980adf";break;
+                            case "DEC 15":url="https://firebasestorage.googleapis.com/v0/b/easystudy-e2cd4.appspot.com/o/I%2FAM1%2FAM1-D15.pdf?alt=media&token=ed7797b1-188c-4b7c-a7b8-16096d9a027b";break;
+                            case "MAY 15":url="https://firebasestorage.googleapis.com/v0/b/easystudy-e2cd4.appspot.com/o/I%2FAM1%2FAM1-M15.pdf?alt=media&token=44cdb0e8-6557-4032-ae7c-8322a83b37b3";break;
+                            case "DEC 14":url="https://firebasestorage.googleapis.com/v0/b/easystudy-e2cd4.appspot.com/o/I%2FAM1%2FAM1-D14.pdf?alt=media&token=fe75a12d-0b2c-4e0d-980b-b5d171360afa";break;
+                            case "MAY 14":url="https://firebasestorage.googleapis.com/v0/b/easystudy-e2cd4.appspot.com/o/I%2FAM1%2FAM1-M14.pdf?alt=media&token=2df28468-4827-4e08-a074-ad293166b6ef";break;
                         }break;
                     case "AC1":
                         switch(year){
-                            case "DEC 16":url="http://files.stupidsid.com/university_papers/engineering/D16/SE/Comps/Sem-3/AM3.pdf";break;
-                            case "MAY 16":url="http://files.stupidsid.com/university_papers/engineering/M16/SE/Comps/Sem3/AM3.pdf";break;
-                            case "DEC 15":url="http://files.stupidsid.com/university_papers/engineering/D15/SE/Comps/AM3.pdf";break;
-                            case "MAY 15":url="http://files.stupidsid.com/university_papers/engineering/M15/SE/SEM%203/COMP/MATHS.pdf";break;
-                            case "DEC 14":url="http://files.stupidsid.com/university_papers/engineering/D14/M3.pdf";break;
-                            case "MAY 14":url="http://files.stupidsid.com/university_papers/engineering/may2014/comp/s.e/J14SE3-comp/applied%20maths-3.pdf";break;
+                            case "DEC 16":url="https://firebasestorage.googleapis.com/v0/b/easystudy-e2cd4.appspot.com/o/I%2FAC1%2FAC1-D16.pdf?alt=media&token=029dc23f-f8b8-44a3-acea-c8ce20455dbe";break;
+                            case "MAY 16":url="https://firebasestorage.googleapis.com/v0/b/easystudy-e2cd4.appspot.com/o/I%2FAC1%2FAC1-M16.pdf?alt=media&token=4c260bef-4ddf-4698-8bfa-e76abce143ec";break;
+                            case "DEC 15":url="https://firebasestorage.googleapis.com/v0/b/easystudy-e2cd4.appspot.com/o/I%2FAC1%2FAC1-D15.pdf?alt=media&token=365b52b4-dc88-45d8-8329-6a5abf5f848c";break;
+                            case "MAY 15":url="https://firebasestorage.googleapis.com/v0/b/easystudy-e2cd4.appspot.com/o/I%2FAC1%2FAC1-M15.pdf?alt=media&token=272563ea-b2f2-48ff-b33e-f76209554e12";break;
+                            case "DEC 14":url="https://firebasestorage.googleapis.com/v0/b/easystudy-e2cd4.appspot.com/o/I%2FAC1%2FAC1-D14.pdf?alt=media&token=18a3e72f-b4c1-4aeb-8a1e-d4ef291c6ded";break;
+                            case "MAY 14":url="https://firebasestorage.googleapis.com/v0/b/easystudy-e2cd4.appspot.com/o/I%2FAC1%2FAC1-M14.pdf?alt=media&token=77db0eb2-01ae-4da3-b579-989472438d7e";break;
                         }break;
                     case "AP1":
                         switch(year){
@@ -530,7 +535,17 @@ public class UniversityPapers extends AppCompatActivity {
             public void onClick(View v) {
                 setContentView(R.layout.activity_paper);
                 WebView paper=(WebView)findViewById(R.id.paper);
-                paper.loadUrl("http://drive.google.com/viewerng/viewer?embedded=true&url="+url);
+                paper.getSettings().setJavaScriptEnabled(true);
+                paper.getSettings().setLoadWithOverviewMode(true);
+                paper.getSettings().setUseWideViewPort(true);
+                paper.setVerticalScrollBarEnabled(true);
+                paper.setHorizontalScrollBarEnabled(true);
+                try {
+                    paper.loadUrl("http://docs.google.com/gview?embedded=true&url="+ URLEncoder.encode(url, "utf-8"));
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+                setContentView(paper);
             }
         });
 
